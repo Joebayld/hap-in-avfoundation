@@ -66,7 +66,6 @@
 		1A5A4DE41A54A047005C961F /* AVAssetAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A5A4DE21A54A047005C961F /* AVAssetAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A5A4DE51A54A047005C961F /* AVAssetAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A5A4DE31A54A047005C961F /* AVAssetAdditions.m */; };
 		1A60606C1A38D812008E693F /* PixelFormats.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A60606B1A38D812008E693F /* PixelFormats.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A60606E1A38D8D9008E693F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A60606D1A38D8D9008E693F /* OpenGL.framework */; };
 		1A6060701A38D8DE008E693F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A60606F1A38D8DE008E693F /* Accelerate.framework */; };
 		1A6060731A38D91A008E693F /* HapInAVFoundation_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1A6060721A38D91A008E693F /* HapInAVFoundation_Prefix.pch */; };
 		1A6060751A38D929008E693F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6060741A38D929008E693F /* Carbon.framework */; };
@@ -162,6 +161,7 @@
 		1ACF5DEC1A3E4127005DDF19 /* PixelFormats.c in Sources */ = {isa = PBXBuildFile; fileRef = 1ACF5DEB1A3E4127005DDF19 /* PixelFormats.c */; };
 		1ACF5DED1A3E41FF005DDF19 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0518671A3E1DAB00FC80D2 /* CoreVideo.framework */; };
 		1AE092DC1AFE96F4004E866B /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE092DB1AFE96F4004E866B /* VideoToolbox.framework */; };
+		68ECC903267033FB00A57F54 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A60606D1A38D8D9008E693F /* OpenGL.framework */; };
 		840B32C72417D9DD007CA678 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840B32C62417D9DD007CA678 /* Metal.framework */; };
 		840B32CC2417E796007CA678 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840B32CB2417E796007CA678 /* MetalKit.framework */; };
 		84C83733242A79B000734A42 /* TextureRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C83726242A79B000734A42 /* TextureRenderer.m */; };
@@ -461,10 +461,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A680E2A1A39F67E007678E5 /* CoreMedia.framework in Frameworks */,
+				68ECC903267033FB00A57F54 /* OpenGL.framework in Frameworks */,
 				1A680E241A39CFFF007678E5 /* AVFoundation.framework in Frameworks */,
 				1A6060751A38D929008E693F /* Carbon.framework in Frameworks */,
 				1A6060701A38D8DE008E693F /* Accelerate.framework in Frameworks */,
-				1A60606E1A38D8D9008E693F /* OpenGL.framework in Frameworks */,
 				1A8904FD1A38D25400A6CE71 /* libsquish.dylib in Frameworks */,
 				1A97F5D61A38AD0700E0DC74 /* libsnappy.dylib in Frameworks */,
 				1ACF5DED1A3E41FF005DDF19 /* CoreVideo.framework in Frameworks */,
@@ -949,6 +949,7 @@
 					};
 					1A97F5AA1A38ABBF00E0DC74 = {
 						CreatedOnToolsVersion = 6.1;
+						ProvisioningStyle = Automatic;
 					};
 					1AABDE89207E544000D8F504 = {
 						CreatedOnToolsVersion = 9.2;
@@ -1533,8 +1534,11 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = ssse3;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Vidvox, LLC (KH97KZU7A7)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1550,6 +1554,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Vidvox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1559,8 +1564,11 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = ssse3;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Vidvox, LLC (KH97KZU7A7)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1576,6 +1584,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Vidvox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
